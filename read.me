@@ -1,0 +1,31 @@
+yarn add react-native-basic-form
+yarn add react-native-vector-icons  
+npx react-native link react-native-vector-icon
+yarn add @react-native-community/datetimepicker
+
+
+#dependencies (Reat Native CLI only < v0.16)
+
+./gradlew wrapper --gradle-version=7.2.1 --distribution-type=bin
+npx react-native run-android warning-mode=all
+
+
+cd .\android\
+./gradlew clean
+./gradlew :app:bundleRelease
+
+#These two have problems
+ViewPropTypes in MaskedViewProps
+ColorPropType in react-native-picker-select
+
+.\emulator.exe -avd "MyAvd"
+emulator.exe -avd "Pixel_5_API_30"
+
+yarn add react-hook-form react-native-paper react-native-keyboard-aware-scroll-view react-native-modal-datetime-picker
+ npm test 
+
+
+1. Clear watchman watches: watchman watch-del-all
+ 2. Delete node_modules: rm -rf node_modules and run yarn install
+ 3. Reset Metro's cache: yarn start --reset-cache
+ 4. Remove the cache: rm -rf /tmp/metro-*
